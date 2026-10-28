@@ -21,3 +21,6 @@ IDE and operating system
 .vscode/
 .DS_Store
 Thumbs.db
+
+# SQLite database
+*.db
