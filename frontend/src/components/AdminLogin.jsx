@@ -22,7 +22,7 @@ function AdminLogin({ onLogin, onBack }) {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/auth/admin/login",
+        `${import.meta.env.VITE_API_URL}/auth/admin/login`,
         {
           email,
           password,

@@ -29,7 +29,7 @@ function ForgotPassword({ onBack }) {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/auth/forgot-password",
+        `${import.meta.env.VITE_API_URL}/auth/forgot-password`,
         null,
         {
           params: { email },
@@ -70,7 +70,7 @@ function ForgotPassword({ onBack }) {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/auth/reset-password",
+        `${import.meta.env.VITE_API_URL}/auth/reset-password`,
         null,
         {
           params: {

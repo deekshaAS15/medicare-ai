@@ -42,7 +42,7 @@ function Appointment({ doctor, onBack }) {
       }
 
       await axios.post(
-        "http://127.0.0.1:8000/appointments/",
+        `${import.meta.env.VITE_API_URL}/appointments/`,
         {
         doctor_id:doctor?.id,
         appointment_date:formData.appointment_date,

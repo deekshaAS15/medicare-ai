@@ -24,7 +24,7 @@ function AdminDashboard({ onLogout }) {
       const token = localStorage.getItem("admin_access_token");
 
       const response = await axios.get(
-        "http://127.0.0.1:8000/appointments/admin",
+        `${import.meta.env.VITE_API_URL}/appointments/admin`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -69,7 +69,7 @@ function AdminDashboard({ onLogout }) {
       const token = localStorage.getItem("admin_access_token");
 
       await axios.patch(
-        `http://127.0.0.1:8000/appointments/admin/${appointmentId}/status`,
+        `${import.meta.env.VITE_API_URL}/appointments/admin/${appointmentId}/status`,
         null,
         {
           params: {
@@ -125,7 +125,7 @@ function AdminDashboard({ onLogout }) {
     );
 
     await axios.delete(
-      `http://127.0.0.1:8000/appointments/admin/${appointmentId}`,
+      `${import.meta.env.VITE_API_URL}/appointments/admin/${appointmentId}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,

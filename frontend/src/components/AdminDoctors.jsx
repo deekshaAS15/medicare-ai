@@ -52,7 +52,7 @@ function AdminDoctors() {
       setError("");
 
       const response = await axios.get(
-        "http://127.0.0.1:8000/doctors/"
+        `${import.meta.env.VITE_API_URL}/doctors/`
       );
 
       setDoctors(response.data);
@@ -119,7 +119,7 @@ function AdminDoctors() {
 
       if (editingDoctor) {
         await axios.put(
-          `http://127.0.0.1:8000/doctors/${editingDoctor.id}`,
+          `${import.meta.env.VITE_API_URL}/doctors/${editingDoctor.id}`,
           doctorData,
           {
             headers: {
@@ -131,7 +131,7 @@ function AdminDoctors() {
         setMessage("Doctor updated successfully!");
       } else {
         await axios.post(
-          "http://127.0.0.1:8000/doctors/",
+          `${import.meta.env.VITE_API_URL}/doctors/`,
           doctorData,
           {
             headers: {
@@ -200,7 +200,7 @@ function AdminDoctors() {
       setMessage("");
 
       await axios.delete(
-        `http://127.0.0.1:8000/doctors/${doctor.id}`,
+        `${import.meta.env.VITE_API_URL}/doctors/${doctor.id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

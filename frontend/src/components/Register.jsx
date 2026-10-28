@@ -58,7 +58,7 @@ function Register({ onRegister, onLogin }) {
 
   try {
     await axios.post(
-      "http://127.0.0.1:8000/auth/register",
+      `${import.meta.env.VITE_API_URL}/auth/register`,
       formData
     );
 
