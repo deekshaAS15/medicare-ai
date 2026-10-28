@@ -1,5 +1,6 @@
 import hashlib
 import secrets
+import os
 from datetime import datetime, timedelta, timezone
 
 from fastapi import APIRouter, Depends, HTTPException
@@ -26,7 +27,7 @@ pwd_context = CryptContext(
 )
 
 
-SECRET_KEY = "medicare-ai-secret-key-change-later"
+SECRET_KEY = os.getenv("SECRET-KEY")
 
 ALGORITHM = "HS256"
 
