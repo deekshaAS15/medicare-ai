@@ -27,7 +27,7 @@ pwd_context = CryptContext(
 )
 
 
-SECRET_KEY = os.getenv("SECRET-KEY")
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 ALGORITHM = "HS256"
 
