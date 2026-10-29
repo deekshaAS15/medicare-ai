@@ -13,17 +13,17 @@ Responsive Interface: User-friendly design for different screen sizes.
 
 #Technologies Used
 
-Frontend
-  React.js
-  Vite
-  Tailwind CSS
-  Axios
-  Lucide React
+Frontend:
+   • React.js
+   • Vite
+   • Tailwind CSS
+   • Axios
+   • Lucide React
 
-Backend
-  Python
-  FastAPI
-  SQLAIchemy
-  SQLite
-  JWT authentication
-  Groq API for AI chat
+Backend:
+   • Python
+   • FastAPI
+   • SQLAIchemy
+   • SQLite
+   • JWT authentication
+   • Groq API for AI chat
