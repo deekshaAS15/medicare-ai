@@ -57,7 +57,7 @@ function MyAppointments({ onBack }) {
     const token = localStorage.getItem("access_token");
 
     await axios.delete(
-      `http://127.0.0.1:8000/appointments/${appointmentId}`,
+      `${import.meta.env.VITE_API_URL}/appointments/${appointmentId}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
